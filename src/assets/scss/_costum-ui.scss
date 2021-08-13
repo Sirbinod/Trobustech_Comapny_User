@@ -1,0 +1,51 @@
+.company-profile-card {
+  margin: 0 7rem 3rem;
+  padding: 2rem 3rem;
+  border: 1px solid rgb(248, 248, 248);
+  .sub-title {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 900) {
+  .company-profile-card {
+    margin: 0;
+    padding: 1.5rem 2rem;
+  }
+}
+.subscription {
+  margin: 0px 7rem 3rem;
+  border-radius: 0.6rem;
+  padding: 1rem 1.5rem;
+  .subscription-card {
+    background-color: #e5e5ea;
+    border-radius: 0.5rem;
+    margin: 1rem 0 0;
+    padding: 0 0.5rem;
+    .subscription-card-head {
+      display: flex;
+      justify-content: space-between;
+      color: black;
+      .price {
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+      .months {
+        font-size: 1rem;
+        color: gray;
+      }
+    }
+    .subscription-card-active {
+      font-size: 1rem;
+      margin: 1.2rem 0;
+      color: #000;
+    }
+    .subscription-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .data {
+        color: black;
+      }
+    }
+  }
+}
