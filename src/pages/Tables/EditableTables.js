@@ -1,73 +1,94 @@
 import React from "react"
-import MetaTags from 'react-meta-tags';
-
-import { Row, Col, Card, CardBody, CardTitle } from "reactstrap"
-// Editable
-import BootstrapTable from "react-bootstrap-table-next"
-import cellEditFactory from "react-bootstrap-table2-editor"
+import MetaTags from "react-meta-tags"
+import { MDBDataTable } from "mdbreact"
+import { Row, Col, Card, CardBody, CardTitle, CardSubtitle } from "reactstrap"
 
 //Import Breadcrumb
 import Breadcrumbs from "../../components/Common/Breadcrumb"
+import "./datatables.scss"
+import { Link } from "react-router-dom"
 
-const products = [
-  { id: 1, age: 25, qty: 1500, cost: 1000 },
-  { id: 2, age: 34, qty: 1900, cost: 1300 },
-  { id: 3, age: 67, qty: 1300, cost: 1300 },
-  { id: 4, age: 23, qty: 1100, cost: 6400 },
-  { id: 5, age: 78, qty: 1400, cost: 4000 },
-]
+const EdittableTables = () => {
+  const data = {
+    columns: [
+      {
+        label: "Name",
+        field: "name",
+        sort: "asc",
+        width: 150,
+      },
+      {
+        label: "Location",
+        field: "location",
+        sort: "asc",
+        width: 270,
+      },
+      {
+        label: "Candidates",
+        field: "candidate",
+        sort: "asc",
+        width: 200,
+      },
+      {
+        label: "Status",
+        field: "status",
+        sort: "asc",
+        width: 100,
+      },
+      {
+        label: "Action",
+        field: "action",
+        sort: "asc",
+        width: 150,
+      },
+    ],
+    rows: [
+      {
+        name: "React Developer",
+        location: "Samakhusi, Kathmandu",
+        candidate: "2",
+        status: "Open",
+        action: <Link to="/ui-alerts">View</Link>,
+      },
+      {
+        name: "Node Developer",
+        location: "Samakhusi, Kathmandu",
+        candidate: "2",
+        status: "Open",
+        action: <Link to="/ui-alerts">View</Link>,
+      },
+      {
+        name: "PHP Developer",
+        location: "Samakhusi, Kathmandu",
+        candidate: "2",
+        status: "Open",
+        action: <Link to="/ui-alerts">View</Link>,
+      },
+      {
+        name: "Intern",
+        location: "Samakhusi, Kathmandu",
+        candidate: "2",
+        status: "Open",
+        action: <Link to="/ui-alerts">View</Link>,
+      },
+    ],
+  }
 
-const columns = [
-  {
-    dataField: "id",
-    text: "ID",
-  },
-  {
-    dataField: "age",
-    text: "Age(AutoFill)",
-  },
-  {
-    dataField: "qty",
-    text: "Qty(AutoFill and Editable)",
-  },
-  {
-    dataField: "cost",
-    text: "Cost(Editable)",
-  },
-]
-
-const EditableTables = () => {
   return (
     <React.Fragment>
-      <div className="page-content">
-        <MetaTags>
-          <title>Editable Tables | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
-        </MetaTags>
-        <div className="container-fluid">
-          <Breadcrumbs maintitle="Veltrix" title="Tables" breadcrumbItem="Editable Table" />
+      <Row>
+        <Col className="col-12">
+          <Card>
+            <CardBody>
+              <CardTitle className="h4">Jobs</CardTitle>
 
-          <Row>
-            <Col>
-              <Card>
-                <CardBody>
-                  <CardTitle className="h4">Datatable Editable </CardTitle>
-
-                  <div className="table-responsive">
-                    <BootstrapTable
-                      keyField="id"
-                      data={products}
-                      columns={columns}
-                      cellEdit={cellEditFactory({ mode: "click" })}
-                    />
-                  </div>
-                </CardBody>
-              </Card>
-            </Col>
-          </Row>
-        </div>
-      </div>
+              <MDBDataTable responsive bordered data={data} />
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
     </React.Fragment>
   )
 }
 
-export default EditableTables
+export default EdittableTables

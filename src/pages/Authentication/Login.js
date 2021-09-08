@@ -1,32 +1,37 @@
-import PropTypes from 'prop-types'
-import MetaTags from 'react-meta-tags';
+// import PropTypes from 'prop-types'
+import MetaTags from "react-meta-tags"
 import React from "react"
 
 import { Row, Col, CardBody, Card, Alert, Container } from "reactstrap"
 
 // Redux
-import { connect } from "react-redux"
-import { withRouter, Link } from "react-router-dom"
+// import { connect } from "react-redux"
+import { Link } from "react-router-dom"
 
 // availity-reactstrap-validation
 import { AvForm, AvField } from "availity-reactstrap-validation"
 
 // actions
-import { loginUser, apiError } from "../../store/actions"
+import { loginUser } from "../../store/actions"
 
 // import images
-import logoSm from "../../assets/images/logo-sm.png";
+import logoSm from "../../assets/images/logo-sm.png"
+import { useDispatch, useSelector } from "react-redux"
 
 const Login = props => {
+  const dispatch = useDispatch()
+
+  const { error, loading } = useSelector(state => state.Login)
   // handleValidSubmit
+
   const handleValidSubmit = (event, values) => {
-    props.loginUser(values, props.history)
+    dispatch(loginUser(values, props.history))
   }
 
   return (
     <React.Fragment>
       <MetaTags>
-        <title>Login | Veltrix - Responsive Bootstrap 5 Admin Dashboard</title>
+        <title>Login | JobsTrobustech</title>
       </MetaTags>
       <div className="home-btn d-none d-sm-block">
         <Link to="/" className="text-dark">
@@ -40,12 +45,10 @@ const Login = props => {
               <Card className="overflow-hidden">
                 <div className="bg-primary">
                   <div className="text-primary text-center p-4">
-                    <h5 className="text-white font-size-20">
-                      Welcome Back !
-                        </h5>
+                    <h5 className="text-white font-size-20">Welcome Back !</h5>
                     <p className="text-white-50">
-                      Sign in to continue to Veltrix.
-                        </p>
+                      Sign in to continue to JobsTrobustech.
+                    </p>
                     <Link to="/" className="logo logo-admin">
                       <img src={logoSm} height="24" alt="logo" />
                     </Link>
@@ -90,8 +93,17 @@ const Login = props => {
                       <Row className="mb-3">
                         <Col sm={6}>
                           <div className="form-check">
-                            <input type="checkbox" className="form-check-input" id="customControlInline" />
-                            <label className="form-check-label" htmlFor="customControlInline">Remember me</label>
+                            <input
+                              type="checkbox"
+                              className="form-check-input"
+                              id="customControlInline"
+                            />
+                            <label
+                              className="form-check-label"
+                              htmlFor="customControlInline"
+                            >
+                              Remember me
+                            </label>
                           </div>
                         </Col>
                         <Col sm={6} className="text-end">
@@ -100,18 +112,17 @@ const Login = props => {
                             type="submit"
                           >
                             Log In
-                              </button>
+                          </button>
                         </Col>
                       </Row>
                       <Row className="mt-2 mb-0 row">
                         <div className="col-12 mt-4">
                           <Link to="/forgot-password">
                             <i className="mdi mdi-lock"></i> Forgot your
-                                password?
-                              </Link>
+                            password?
+                          </Link>
                         </div>
                       </Row>
-                      
                     </AvForm>
                   </div>
                 </CardBody>
@@ -119,17 +130,14 @@ const Login = props => {
               <div className="mt-5 text-center">
                 <p>
                   Don&#39;t have an account ?{" "}
-                  <Link
-                    to="register"
-                    className="fw-medium text-primary"
-                  >
+                  <Link to="register" className="fw-medium text-primary">
                     {" "}
                     Signup now{" "}
                   </Link>{" "}
                 </p>
                 <p>
-                  © {new Date().getFullYear()} Veltrix. Crafted with{" "}
-                  <i className="mdi mdi-heart text-danger" /> by Themesbrand
+                  © {new Date().getFullYear()} JobsTrobustech. Crafted with{" "}
+                  <i className="mdi mdi-heart text-danger" /> by LightWeb Group
                 </p>
               </div>
             </Col>
@@ -140,17 +148,4 @@ const Login = props => {
   )
 }
 
-const mapStateToProps = state => {
-  const { error } = state.Login
-  return { error }
-}
-
-export default withRouter(
-  connect(mapStateToProps, { loginUser, apiError })(Login)
-)
-
-Login.propTypes = {
-  error: PropTypes.any,
-  history: PropTypes.object,
-  loginUser: PropTypes.func,
-}
+export default Login

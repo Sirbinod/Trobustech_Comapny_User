@@ -78,6 +78,7 @@ import FormUpload from "../pages/Forms/FormUpload"
 import FormWizard from "../pages/Forms/FormWizard"
 import FormXeditable from "../pages/Forms/FormXeditable"
 import FormCompany from "pages/Forms/FormCompany"
+import CandidateCreate from "pages/Forms/CandidateCreate"
 
 //Ui
 import UiAlert from "../pages/Ui/UiAlert"
@@ -99,6 +100,7 @@ import UiVideo from "../pages/Ui/UiVideo"
 import UiSessionTimeout from "../pages/Ui/UiSessionTimeout"
 import UiRating from "../pages/Ui/UiRating"
 import UiRangeSlider from "../pages/Ui/UiRangeSlider"
+import CandidatePositionPole from "pages/Ui/CandidatePositionPole"
 
 //Pages
 import PagesStarter from "../pages/Utility/pages-starter"
@@ -169,8 +171,10 @@ const userRoutes = [
   { path: "/form-wizard", component: FormWizard },
   { path: "/form-validation", component: FormValidations },
   { path: "/form-xeditable", component: FormXeditable },
+  { path: "/candidate-create", component: CandidateCreate },
 
   // Ui
+  { path: "/candidate-position-pole", component: CandidatePositionPole },
   { path: "/ui-alerts", component: UiAlert },
   { path: "/ui-buttons", component: UiButtons },
   { path: "/ui-cards", component: UiCards },

@@ -28,12 +28,12 @@ const UiButtons = () => {
         </MetaTags>
         <Container fluid={true}>
           <Breadcrumbs
-            maintitle="Veltrix"
-            title="UI Elements"
-            breadcrumbItem="Buttons"
+            maintitle="JobsTrobustech"
+            title="Subscription"
+            breadcrumbItem="Subscription Plan"
           />
 
-          <Row className="mx-5">
+          <Row className="my-5">
             <Col>
               <Card className="subscription">
                 <CardBody>

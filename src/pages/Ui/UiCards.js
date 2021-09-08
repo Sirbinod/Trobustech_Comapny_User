@@ -36,16 +36,16 @@ const UiCards = props => {
     <React.Fragment>
       <div className="page-content">
         <MetaTags>
-          <title>Cards |</title>
+          <title>Company Profile</title>
         </MetaTags>
         <Container fluid={true}>
           <Breadcrumbs
-            maintitle="Veltrix"
-            title="UI Elements"
-            breadcrumbItem="Cards"
+            maintitle="JobsTrobustech"
+            title="Company"
+            breadcrumbItem="Company Profile"
           />
 
-          <Row>
+          <Row className="mb-4">
             <Col>
               <Card body className="company-profile-card">
                 <Row>
@@ -65,17 +65,17 @@ const UiCards = props => {
                       Mauris blandit nisl ullamcorper, rutrum metus in, congue
                       lectus. In hac habitasse platea dictumst. Cras urna quam,
                       malesuada vitae risus at, pretium blandit sapien.Lorem
-                      ipsum dolor sit amet, consectetur adipiscing elit. Mauris
-                      blandit nisl ullamcorper, rutrum metus.
+                      ipsum dolor sit amet, consectetur adipiscing elit. nisl
+                      ullamcorper, rutrum metus.
                     </p>
                   </Col>
                   <Col md={4}>
                     <Row className="mb-4">
-                      <Col>
+                      <Col md={7}>
                         <h5>Expired Date</h5>
                         <h5>09/20/2021</h5>
                       </Col>
-                      <Col>
+                      <Col md={5}>
                         <h5>Status</h5>
                         <h5>Active</h5>
                       </Col>

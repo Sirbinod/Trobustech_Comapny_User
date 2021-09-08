@@ -18,9 +18,8 @@ import { Link } from "react-router-dom"
 import Breadcrumbs from "../../components/Common/Breadcrumb"
 import BasicTables from "pages/Tables/BasicTables"
 import EditableTables from "pages/Tables/EditableTables"
-import ResponsiveTables from "pages/Tables/ResponsiveTables"
 
-const UiAlert = () => {
+const CandidatePositionPole = () => {
   return (
     <React.Fragment>
       <div className="page-content">
@@ -30,21 +29,11 @@ const UiAlert = () => {
         <Container fluid={true}>
           <Breadcrumbs
             maintitle="Jobstrobustech"
-            title="jobs"
+            title="Candidate"
             breadcrumbItem="Position/pole"
           />
-          <h2 className="developer">MERN Developer</h2>
+          <h2 className="developer">Tiger Nixon</h2>
           <Row>
-            <Col lg={2}>
-              <Card>
-                <CardBody>
-                  <div className="onbench">
-                    <h2>8</h2>
-                    <h5>On Bench</h5>
-                  </div>
-                </CardBody>
-              </Card>
-            </Col>
             <Col lg={2}>
               <Card>
                 <CardBody>
@@ -85,19 +74,9 @@ const UiAlert = () => {
                 </CardBody>
               </Card>
             </Col>
-            <Col lg={2}>
-              <Card>
-                <CardBody>
-                  <div className="hired">
-                    <h2>8</h2>
-                    <h5>Hired</h5>
-                  </div>
-                </CardBody>
-              </Card>
-            </Col>
           </Row>
           <div className="position-table">
-            <ResponsiveTables />
+            <EditableTables />
           </div>
         </Container>
       </div>
@@ -105,4 +84,4 @@ const UiAlert = () => {
   )
 }
 
-export default UiAlert
+export default CandidatePositionPole

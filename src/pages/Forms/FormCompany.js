@@ -381,13 +381,13 @@ const FormCompany = () => {
     <React.Fragment>
       <div className="page-content">
         <MetaTags>
-          <title>User Create | Job</title>
+          <title>Profile Change| JobTrobustech</title>
         </MetaTags>
         <Container fluid={true}>
           <Breadcrumbs
-            maintitle="Veltrix"
-            title="Form"
-            breadcrumbItem="User Create"
+            maintitle="Jobtrobustect"
+            title="Company"
+            breadcrumbItem="Company Edit Form"
           />
 
           <Row>
@@ -477,7 +477,7 @@ const FormCompany = () => {
                       </Col>
                       <div className="d-flex flex-wrap gap-2">
                         <Button type="submit" color="primary" className="">
-                          Next
+                          Submit
                         </Button>{" "}
                         <Button type="reset" color="secondary" className="">
                           Cancel

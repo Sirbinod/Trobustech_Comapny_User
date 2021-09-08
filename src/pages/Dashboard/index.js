@@ -67,7 +67,7 @@ const Dashboard = props => {
                   </li>
                 </ol>
               </Col>
-
+              {/* 
               <Col md="4">
                 <div className="float-end d-none d-md-block">
                   <Dropdown isOpen={menu} toggle={toggle}>
@@ -95,6 +95,7 @@ const Dashboard = props => {
                   </Dropdown>
                 </div>
               </Col>
+            */}
             </Row>
           </div>
           <Row>
@@ -106,7 +107,7 @@ const Dashboard = props => {
                       <img src={servicesIcon1} alt="" />
                     </div>
                     <h5 className="font-size-16 text-uppercase mt-0 text-white-50">
-                      Orders
+                      Candidate
                     </h5>
                     <h4 className="fw-medium font-size-24">
                       1,685{" "}
@@ -127,7 +128,7 @@ const Dashboard = props => {
                 </CardBody>
               </Card>
             </Col>
-            <Col xl={3} md={6}>
+            {/* <Col xl={3} md={6}>
               <Card className="mini-stat bg-primary text-white">
                 <CardBody>
                   <div className="mb-4">
@@ -187,6 +188,7 @@ const Dashboard = props => {
                 </CardBody>
               </Card>
             </Col>
+            */}
             <Col xl={3} md={6}>
               <Card className="mini-stat bg-primary text-white">
                 <CardBody>
@@ -195,7 +197,7 @@ const Dashboard = props => {
                       <img src={servicesIcon4} alt="" />
                     </div>
                     <h5 className="font-size-16 text-uppercase mt-0 text-white-50">
-                      Product Sold
+                      Jobs
                     </h5>
                     <h4 className="fw-medium font-size-24">
                       2436{" "}

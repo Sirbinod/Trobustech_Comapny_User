@@ -32,10 +32,10 @@ const FormValidations = () => {
     <React.Fragment>
       <div className="page-content">
         <MetaTags>
-          <title>Form Validation </title>
+          <title>Subscription Payment </title>
         </MetaTags>
         <Container fluid={true}>
-          <Breadcrumbs title="Form" breadcrumbItem="Form Validation" />
+          <Breadcrumbs title="Subscription" breadcrumbItem="Payment" />
 
           <Row>
             <Col xl="6">
